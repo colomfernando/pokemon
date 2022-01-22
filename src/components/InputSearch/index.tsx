@@ -1,8 +1,12 @@
 import React from 'react';
 import Styles from './styles';
 
-const InputSearch: React.FC = () => {
-  return <Styles.Input value="fer" />;
+interface PropsInputSearch {
+  value: string;
+}
+
+const InputSearch: React.FC<PropsInputSearch> = ({ value }) => {
+  return <Styles.Input value={value} />;
 };
 
 export default InputSearch;

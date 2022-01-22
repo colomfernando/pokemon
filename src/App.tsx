@@ -6,9 +6,7 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <Header>
-        <div>adsf</div>
-      </Header>
+      <Header />
     </>
   );
 };
