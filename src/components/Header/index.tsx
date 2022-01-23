@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Styles from './styles';
 import InputSearch from 'components/InputSearch';
+import useStore from 'store/pokemons';
 import usePokemons from 'hooks/usePokemons';
-import useStore from 'hooks/useStore';
-import { setPokemons } from 'hooks/useStore/actions';
+import { setPokemons } from 'store/pokemons/actions';
 
 const randomIds = Array.from({ length: 20 }, () =>
-  String(Math.floor(Math.random() * 100))
+  String(Math.floor(Math.random() * 100) + 1)
 );
 
 const Header: React.FC = ({ ...props }) => {
@@ -23,6 +23,7 @@ const Header: React.FC = ({ ...props }) => {
   useEffect(() => {
     if (data && data.length) dispatch(setPokemons(data));
   }, [data]);
+
   return (
     <Styles.Header {...props}>
       <InputSearch

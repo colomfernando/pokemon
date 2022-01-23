@@ -25,6 +25,10 @@ export interface Type {
   };
 }
 
+export interface Sprite {
+  front_default: string;
+}
+
 export interface Pokemon {
   name: string;
   abilities: Abilities;
@@ -35,6 +39,7 @@ export interface Pokemon {
   species: Specie;
   wight: number;
   types: Type[];
+  sprites: Sprite;
 }
 
 export interface InitialStore {
