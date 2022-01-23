@@ -43,8 +43,6 @@ export interface InitialStore {
   pokemons: [] | Pokemon[];
 }
 
-export type PayloadAction = Pokemon | Pokemon[] | boolean;
-
 export interface Action<P> {
   type: string;
   payload: P;
