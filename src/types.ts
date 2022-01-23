@@ -1,0 +1,53 @@
+export interface Ability {
+  name: string;
+}
+
+export interface Abilities {
+  ability: Ability;
+}
+
+export interface Form {
+  name: string;
+}
+
+export interface Move {
+  name: string;
+}
+
+export interface Specie {
+  name: string;
+}
+
+export interface Type {
+  slot: number;
+  type: {
+    name: string;
+  };
+}
+
+export interface Pokemon {
+  name: string;
+  abilities: Abilities;
+  forms: Form[];
+  height: number;
+  id: number;
+  moves: Move[];
+  species: Specie;
+  wight: number;
+  types: Type[];
+}
+
+export interface InitialStore {
+  loading: boolean;
+  selectedPokemon: Record<string, never> | Pokemon;
+  pokemons: [] | Pokemon[];
+}
+
+export type PayloadAction = Pokemon | Pokemon[] | boolean;
+
+export interface Action<P> {
+  type: string;
+  payload: P;
+}
+
+export type Actions = Action<Pokemon> | Action<Pokemon[]> | Action<boolean>;
