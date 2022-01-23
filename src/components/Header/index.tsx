@@ -5,7 +5,7 @@ import useStore from 'store/pokemons';
 import usePokemons from 'hooks/usePokemons';
 import { setPokemons } from 'store/pokemons/actions';
 
-const randomIds = Array.from({ length: 20 }, () =>
+const randomIds = Array.from({ length: 30 }, () =>
   String(Math.floor(Math.random() * 100) + 1)
 );
 

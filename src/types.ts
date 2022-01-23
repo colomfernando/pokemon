@@ -27,6 +27,11 @@ export interface Type {
 
 export interface Sprite {
   front_default: string;
+  other: {
+    home: {
+      front_default: string;
+    };
+  };
 }
 
 export interface Pokemon {

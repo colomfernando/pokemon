@@ -9,6 +9,8 @@ const Body = styled.div`
 
 const List = styled.div`
   display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 `;
 
 export default { Body, List };
