@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
 	font-family: 'Sora', sans-serif;
-	background-color: #fef9ef;
+	background-color: white;
 }
 /**
  * Render the main element consistently in IE.

@@ -42,9 +42,10 @@ export interface Pokemon {
   id: number;
   moves: Move[];
   species: Specie;
-  wight: number;
+  width: number;
   types: Type[];
   sprites: Sprite;
+  order: number;
 }
 
 export interface InitialStore {

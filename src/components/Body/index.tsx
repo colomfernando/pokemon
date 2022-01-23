@@ -11,8 +11,8 @@ const Body: React.FC = () => {
       <Styles.List>
         {pokemons &&
           pokemons.length &&
-          pokemons.map((pokemon) => (
-            <PokemonCard key={`${pokemon.id}-${pokemon.name}`} {...pokemon} />
+          pokemons.map((pokemon, idx) => (
+            <PokemonCard key={`${idx}-${pokemon.name}}`} {...pokemon} />
           ))}
       </Styles.List>
     </Styles.Body>
