@@ -17,6 +17,10 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+iframe {
+  pointer-events: none;
+}
 /* Sections
    ========================================================================== */
 /**

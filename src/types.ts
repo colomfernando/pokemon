@@ -42,7 +42,7 @@ export interface Pokemon {
   id: number;
   moves: Move[];
   species: Specie;
-  width: number;
+  weight: number;
   types: Type[];
   sprites: Sprite;
   order: number;

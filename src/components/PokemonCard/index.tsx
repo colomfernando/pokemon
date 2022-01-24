@@ -10,10 +10,14 @@ const PokemonCard: React.FC<Pokemon> = ({ name, sprites, height, weight }) => {
   } = sprites;
   return (
     <Styles.Pokemon>
-      <Styles.Image src={front_default} alt={`${name}-image`} />
-      <Styles.Name>{name}</Styles.Name>
-      <Styles.Size>{`Height: ${height / 10}m`}</Styles.Size>
-      <Styles.Size>{`Weight: ${weight / 10}kg`}</Styles.Size>
+      <Styles.WrapperImage>
+        <Styles.Image src={front_default} alt={`${name}-image`} />
+      </Styles.WrapperImage>
+      <Styles.WrapperInfo>
+        <Styles.Name>{name}</Styles.Name>
+        <Styles.Size>{`Height: ${height / 10}m`}</Styles.Size>
+        <Styles.Size>{`Weight: ${weight / 10}kg`}</Styles.Size>
+      </Styles.WrapperInfo>
     </Styles.Pokemon>
   );
 };
