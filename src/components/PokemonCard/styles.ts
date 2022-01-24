@@ -48,4 +48,17 @@ const Size = styled.span`
   margin: 5px 0;
 `;
 
-export default { Pokemon, WrapperImage, WrapperInfo, Image, Name, Size };
+const WrapperTypes = styled.div`
+  display: flex;
+  margin: 10px;
+`;
+
+export default {
+  Pokemon,
+  WrapperImage,
+  WrapperInfo,
+  WrapperTypes,
+  Image,
+  Name,
+  Size,
+};
