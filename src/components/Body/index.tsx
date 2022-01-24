@@ -9,8 +9,7 @@ const Body: React.FC = () => {
   return (
     <Styles.Body>
       <Styles.List>
-        {pokemons &&
-          pokemons.length &&
+        {!!pokemons.length &&
           pokemons.map((pokemon, idx) => (
             <PokemonCard key={`${idx}-${pokemon.name}}`} {...pokemon} />
           ))}
