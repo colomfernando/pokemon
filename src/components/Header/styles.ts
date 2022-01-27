@@ -3,7 +3,9 @@ import palette from 'theme/palette';
 
 const Header = styled.header`
   width: 100%;
-  padding: 25px;
+  padding: 20px;
+  color: white;
+  font-weight: 900;
   background-color: ${palette.secondary.main};
 `;
 

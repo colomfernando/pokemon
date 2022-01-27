@@ -1,19 +1,19 @@
 import useSWR from 'swr';
 import { Pokemon } from 'types';
-import fetcherPokemons from './fetcherPokemons';
+import fetcherGetInfoPokemon from './fetcherPokemons';
 
 interface Response {
-  data: Pokemon[] | [] | undefined;
+  data: Pokemon | undefined;
   error: Error;
   isLoading: boolean;
 }
 
-const usePokemons = (searchValues: string[]): Response => {
+const useGetInfoPokemon = (searchValue: string): Response => {
   const { data, error } = useSWR('https://pokeapi.co/api/v2/pokemon', () =>
-    fetcherPokemons(searchValues)
+    fetcherGetInfoPokemon(searchValue)
   );
 
   return { data, error, isLoading: !error && !data };
 };
 
-export default usePokemons;
+export default useGetInfoPokemon;

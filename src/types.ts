@@ -48,6 +48,16 @@ export interface Pokemon {
   order: number;
 }
 
+export interface ResultPokemon {
+  name: string;
+  url: string;
+}
+
+export interface ListPokemons {
+  count: number;
+  results: ResultPokemon[];
+}
+
 export interface InitialStore {
   loading: boolean;
   selectedPokemon: Record<string, never> | Pokemon;
