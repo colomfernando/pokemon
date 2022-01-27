@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import palette from 'theme/palette';
 
 const Header = styled.header`
+  display: flex;
+  padding: 40px;
   width: 100%;
-  padding: 25px;
-  background-color: ${palette.secondary.main};
+  justify-content: center;
+  align-items: center;
 `;
 
 export default { Header };

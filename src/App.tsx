@@ -1,16 +1,17 @@
 import React from 'react';
-import GlobalStyles from 'theme/GlobalStyles';
-import Header from 'components/Header';
-import Body from 'components/Body';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PokemonProvider } from 'store/pokemons';
+import Home from 'pages/Home';
 
 const App: React.FC = () => {
   return (
     <PokemonProvider>
       <>
-        <GlobalStyles />
-        <Header />
-        <Body />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
       </>
     </PokemonProvider>
   );
