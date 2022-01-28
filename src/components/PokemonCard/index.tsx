@@ -1,36 +1,19 @@
 import React from 'react';
 import Styles from './styles';
-import { Pokemon } from 'types';
-import PokemonType from 'components/PokemonType';
+import { ResultPokemon } from 'types';
 
-const PokemonCard: React.FC<Pokemon> = ({
-  name,
-  sprites,
-  height,
-  weight,
-  types,
-}) => {
-  const {
-    other: {
-      home: { front_default },
-    },
-  } = sprites;
+const PokemonCard: React.FC<ResultPokemon> = ({ name, id }) => {
   return (
     <Styles.Pokemon>
       <Styles.WrapperImage>
-        <Styles.Image src={front_default} alt={`${name}-image`} />
+        <Styles.Image
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`}
+          alt={`${name}-image`}
+        />
       </Styles.WrapperImage>
       <Styles.WrapperInfo>
         <Styles.Name>{name}</Styles.Name>
-        <Styles.Size>{`Height: ${height / 10}m`}</Styles.Size>
-        <Styles.Size>{`Weight: ${weight / 10}kg`}</Styles.Size>
-        {types.length && (
-          <Styles.WrapperTypes>
-            {types.map((item, idx) => (
-              <PokemonType key={`${idx}-${item.slot}`} {...item} />
-            ))}
-          </Styles.WrapperTypes>
-        )}
+        <Styles.Name>{id}</Styles.Name>
       </Styles.WrapperInfo>
     </Styles.Pokemon>
   );
