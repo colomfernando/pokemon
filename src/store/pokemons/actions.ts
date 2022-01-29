@@ -1,12 +1,9 @@
 import types from './types';
-import { Action, Pokemon } from 'types';
+import { Action, Pokemon, ResultPokemon } from 'types';
 
-export const setLoading = (bool: boolean): Action<boolean> => ({
-  type: types.SET_LOADING,
-  payload: bool,
-});
-
-export const setPokemons = (pokemons: Pokemon[]): Action<Pokemon[]> => ({
+export const setPokemons = (
+  pokemons: ResultPokemon[]
+): Action<ResultPokemon[]> => ({
   type: types.SET_RESULTS,
   payload: pokemons,
 });

@@ -61,7 +61,7 @@ export interface ListPokemons {
 export interface InitialStore {
   loading: boolean;
   selectedPokemon: Record<string, never> | Pokemon;
-  pokemons: [] | Pokemon[];
+  pokemons: [] | ResultPokemon[];
 }
 
 export interface Action<P> {
@@ -69,4 +69,4 @@ export interface Action<P> {
   payload: P;
 }
 
-export type Actions = Action<Pokemon> | Action<Pokemon[]> | Action<boolean>;
+export type Actions = Action<Pokemon> | Action<ResultPokemon[]>;

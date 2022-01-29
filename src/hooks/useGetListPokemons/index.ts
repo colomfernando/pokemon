@@ -11,7 +11,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const useGetInfoPokemon = (): Response => {
   const { data, error } = useSWR(
-    'https://pokeapi.co/api/v2/pokemon?limit=1118',
+    'https://pokeapi.co/api/v2/pokemon?limit=493',
     fetcher
   );
 
