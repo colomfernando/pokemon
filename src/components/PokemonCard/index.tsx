@@ -13,19 +13,22 @@ const getIdFromUrl = (url: string) => {
 const PokemonCard: React.FC<ResultPokemon> = ({ name, url }) => {
   const id = getIdFromUrl(url);
 
+  if (!id) return null;
   return (
-    <Styles.Pokemon>
-      <Styles.WrapperImage>
-        <Styles.Image
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`}
-          alt={`${name}-image`}
-        />
-      </Styles.WrapperImage>
-      <Styles.WrapperInfo>
-        <Styles.Name>{name}</Styles.Name>
-        <Styles.Id>{`#${id}`}</Styles.Id>
-      </Styles.WrapperInfo>
-    </Styles.Pokemon>
+    <Styles.LinkTo to={`/pokemon/${id}`} key={id}>
+      <Styles.Pokemon>
+        <Styles.WrapperImage>
+          <Styles.Image
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`}
+            alt={`${name}-image`}
+          />
+        </Styles.WrapperImage>
+        <Styles.WrapperInfo>
+          <Styles.Name>{name}</Styles.Name>
+          <Styles.Id>{`#${id}`}</Styles.Id>
+        </Styles.WrapperInfo>
+      </Styles.Pokemon>
+    </Styles.LinkTo>
   );
 };
 

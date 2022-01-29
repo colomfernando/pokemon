@@ -10,6 +10,7 @@ interface Response {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const useGetInfoPokemon = (): Response => {
+  // todo: agregar local storage
   const { data, error } = useSWR(
     'https://pokeapi.co/api/v2/pokemon?limit=493',
     fetcher

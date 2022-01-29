@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import palette from 'theme/palette';
+import { Link } from 'react-router-dom';
 
 const Pokemon = styled.div`
   display: flex;
@@ -48,6 +49,11 @@ const Image = styled.img`
   height: auto;
 `;
 
+const LinkTo = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default {
   Pokemon,
   WrapperImage,
@@ -55,4 +61,5 @@ export default {
   Image,
   Name,
   Id,
+  LinkTo,
 };
