@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import palette from 'theme/palette';
 import { Link } from 'react-router-dom';
 
@@ -16,29 +16,43 @@ const Pokemon = styled.div`
 
 const Name = styled.p`
   margin: 10px 0;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
   font-weight: 700;
   text-transform: capitalize;
 `;
 
 const Id = styled.span`
   font-weight: 500;
+  width: 100%;
+  text-align: center;
+  max-width: 40px;
 `;
 
-const WrapperImage = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${palette.primary.main};
+type PropsWrapperImage = { isLoading: boolean };
+
+const WrapperImage = styled.div<PropsWrapperImage>`
+  background-color: ${({ isLoading }) =>
+    isLoading ? 'initial' : palette.primary.main};
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   padding: 10px;
+  width: 100%;
+  max-width: 267px;
+  height: 140px;
+  ${({ isLoading }) =>
+    !isLoading &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `}
 `;
 
 const WrapperInfo = styled.div`
   display: flex;
   width: 100%;
-
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
