@@ -9,8 +9,10 @@ const Home: React.FC = () => {
   const [, dispatch] = useStore();
   const { data } = useGetListPokemon();
 
+  //todo agregar skeleton con el loading
+
   useEffect(() => {
-    if (data) dispatch(setPokemons(data));
+    if (data) dispatch(setPokemons(data.results));
   }, [data]);
   return (
     <MainLayout>
