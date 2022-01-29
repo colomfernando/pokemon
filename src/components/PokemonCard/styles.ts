@@ -14,9 +14,13 @@ const Pokemon = styled.div`
 `;
 
 const Name = styled.p`
-  margin: 20px 0;
-  font-weight: 600;
+  margin: 10px 0;
+  font-weight: 700;
   text-transform: capitalize;
+`;
+
+const Id = styled.span`
+  font-weight: 500;
 `;
 
 const WrapperImage = styled.div`
@@ -44,21 +48,11 @@ const Image = styled.img`
   height: auto;
 `;
 
-const Size = styled.span`
-  margin: 5px 0;
-`;
-
-const WrapperTypes = styled.div`
-  display: flex;
-  margin: 10px;
-`;
-
 export default {
   Pokemon,
   WrapperImage,
   WrapperInfo,
-  WrapperTypes,
   Image,
   Name,
-  Size,
+  Id,
 };

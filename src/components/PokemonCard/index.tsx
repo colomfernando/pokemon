@@ -2,7 +2,17 @@ import React from 'react';
 import Styles from './styles';
 import { ResultPokemon } from 'types';
 
-const PokemonCard: React.FC<ResultPokemon> = ({ name, id }) => {
+const getIdFromUrl = (url: string) => {
+  if (!url) return '';
+
+  const splitUrl = url.split('/').filter(Boolean);
+  const id = splitUrl.pop();
+  return id;
+};
+
+const PokemonCard: React.FC<ResultPokemon> = ({ name, url }) => {
+  const id = getIdFromUrl(url);
+
   return (
     <Styles.Pokemon>
       <Styles.WrapperImage>
@@ -13,7 +23,7 @@ const PokemonCard: React.FC<ResultPokemon> = ({ name, id }) => {
       </Styles.WrapperImage>
       <Styles.WrapperInfo>
         <Styles.Name>{name}</Styles.Name>
-        <Styles.Name>{id}</Styles.Name>
+        <Styles.Id>{`#${id}`}</Styles.Id>
       </Styles.WrapperInfo>
     </Styles.Pokemon>
   );
