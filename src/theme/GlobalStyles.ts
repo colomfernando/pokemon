@@ -77,6 +77,8 @@ pre {
  */
 a {
   background-color: transparent;
+	text-decoration: none;
+	color: inherit;
 }
 /**
  * 1. Remove the bottom border in Chrome 57-

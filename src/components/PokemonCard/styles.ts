@@ -49,10 +49,7 @@ const Image = styled.img`
   height: auto;
 `;
 
-const LinkTo = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-`;
+const LinkTo = styled(Link)``;
 
 export default {
   Pokemon,
