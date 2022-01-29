@@ -9,4 +9,6 @@ const Header = styled.header`
   background-color: ${palette.secondary.main};
 `;
 
-export default { Header };
+const Title = styled.h2``;
+
+export default { Header, Title };
