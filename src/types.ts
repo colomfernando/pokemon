@@ -34,6 +34,13 @@ export interface Sprite {
   };
 }
 
+export interface ColorType {
+  [name: string]: {
+    color: string;
+    contrastText: string;
+  };
+}
+
 export interface Pokemon {
   name: string;
   abilities: Abilities;

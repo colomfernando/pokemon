@@ -8,7 +8,7 @@ const fetcherGetInfoPokemon = async (
   value: Value
 ): Promise<Pokemon | undefined> => {
   const results = await fetch(`${URL}/${value}`).then((res) => res.json());
-  console.log('results.ok :>> ', results);
+
   if (!results) throw new Error('error in api');
 
   return results;
