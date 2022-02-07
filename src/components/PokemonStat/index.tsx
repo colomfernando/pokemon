@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles';
 
 interface PropsStat {
   name: string;
@@ -6,7 +7,15 @@ interface PropsStat {
 }
 
 const PokemonStat: React.FC<PropsStat> = ({ name, value }) => {
-  return <div> </div>;
+  return (
+    <Styles.Wrapper>
+      <Styles.Name>{`${name}:`}</Styles.Name>
+      <Styles.Value>{value}</Styles.Value>
+      <Styles.WrapperBar>
+        <Styles.Bar progress={value} />
+      </Styles.WrapperBar>
+    </Styles.Wrapper>
+  );
 };
 
 export default PokemonStat;

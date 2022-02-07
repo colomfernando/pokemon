@@ -10,6 +10,7 @@ const palette = {
   common: {
     black: '#000',
     white: '#fff',
+    grey: '#e0e2db',
   },
 };
 

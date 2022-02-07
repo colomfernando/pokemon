@@ -7,6 +7,7 @@ interface PropType {
 }
 
 const Type = styled.span<PropType>`
+  display: inline-block;
   border-radius: 8px;
   padding: 8px;
   background-color: ${({ type }) =>
@@ -14,7 +15,7 @@ const Type = styled.span<PropType>`
   color: ${({ type }) =>
     colorType[type] ? colorType[type].contrastText : 'white'};
   &:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 10px;
   }
 `;
 

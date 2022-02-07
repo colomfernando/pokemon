@@ -12,9 +12,8 @@ const Wrapper = styled.div<PropType>`
   flex-flow: column nowrap;
   background-color: ${({ type }) =>
     colorType[type] ? colorType[type].color : 'black'};
-  border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 40px 0;
 `;
 
@@ -27,7 +26,7 @@ const WrapperBaseInfo = styled.div`
 
 const WrapperInfo = styled.div`
   background-color: ${palette.common.white};
-  padding: 40px 30px;
+  padding: 30px;
 `;
 
 const Image = styled.img`
@@ -37,4 +36,11 @@ const Image = styled.img`
   margin: 0 auto;
 `;
 
-export default { Wrapper, WrapperBaseInfo, WrapperInfo, Image };
+const WrapperTypes = styled.div`
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export default { Wrapper, WrapperBaseInfo, WrapperInfo, Image, WrapperTypes };
