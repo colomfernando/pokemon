@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   const { data, isLoading } = useGetListPokemon();
   const { pokemons } = store;
 
-  //todo agregar skeleton con el loading
+  //TODO agregar skeleton con el loading
 
   useEffect(() => {
     if (data) dispatch(setPokemons(data.results));

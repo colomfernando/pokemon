@@ -21,6 +21,8 @@ const PokemonInfo: React.FC<Pokemon> = ({
   } = sprites;
   const { type } = firstType;
 
+  //TODO obtener evoluciones en https://pokeapi.co/api/v2/evolution-chain/1/
+
   return (
     <Styles.Wrapper type={type.name || 'white'}>
       <Styles.WrapperBaseInfo>

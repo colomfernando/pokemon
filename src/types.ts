@@ -25,6 +25,14 @@ export interface Type {
   };
 }
 
+export interface Stat {
+  base_stat: number;
+  stat: {
+    name: string;
+    url: string;
+  };
+}
+
 export interface Sprite {
   front_default: string;
   other: {
@@ -52,6 +60,7 @@ export interface Pokemon {
   weight: number;
   types: Type[];
   sprites: Sprite;
+  stats: Stat[];
   order: number;
 }
 
