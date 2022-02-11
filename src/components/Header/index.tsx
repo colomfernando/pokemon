@@ -1,11 +1,13 @@
 import React from 'react';
 import Styles from './styles';
+import { Link } from 'react-router-dom';
 
-// TODO agregar link a home en el texto
 const Header: React.FC = () => {
   return (
     <Styles.Header>
-      <Styles.Title>POKEDEX</Styles.Title>
+      <Link to="/">
+        <Styles.Title>POKEDEX</Styles.Title>
+      </Link>
     </Styles.Header>
   );
 };
