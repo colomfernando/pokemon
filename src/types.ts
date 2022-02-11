@@ -54,6 +54,7 @@ export interface Pokemon {
   abilities: Abilities;
   forms: Form[];
   height: number;
+  base_experience: number;
   id: number;
   moves: Move[];
   species: Specie;

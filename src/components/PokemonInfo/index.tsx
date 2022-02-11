@@ -5,11 +5,15 @@ import PokemonName from 'components/PokemonName';
 import PokemonId from 'components/PokemonId';
 import PokemonType from 'components/PokemonType';
 import PokemonStat from 'components/PokemonStat';
+import PokemonBlockInfo from 'components/PokemonBlockInfo';
 
 const PokemonInfo: React.FC<Pokemon> = ({
   name,
   id,
   types,
+  weight,
+  height,
+  base_experience,
   sprites,
   stats,
   ...props
@@ -45,6 +49,15 @@ const PokemonInfo: React.FC<Pokemon> = ({
             ))}
           </Styles.WrapperTypes>
         )}
+        <Styles.WrapperBlocksInfo>
+          <PokemonBlockInfo value={`${weight / 10} kg`} title="Weight" />
+          <PokemonBlockInfo value={`${height / 10} kg`} title="Height" />
+          <PokemonBlockInfo
+            value={String(base_experience)}
+            title="Experience"
+          />
+        </Styles.WrapperBlocksInfo>
+        <Styles.Title>Stats</Styles.Title>
         {!!getStats.length &&
           getStats.map((item, idx) => (
             <PokemonStat key={`${idx}-${item.name}`} {...item} />

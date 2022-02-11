@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './styles';
 
+// TODO agregar link a home en el texto
 const Header: React.FC = () => {
   return (
     <Styles.Header>

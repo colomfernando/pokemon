@@ -43,4 +43,25 @@ const WrapperTypes = styled.div`
   align-items: center;
 `;
 
-export default { Wrapper, WrapperBaseInfo, WrapperInfo, Image, WrapperTypes };
+const Title = styled.h3`
+  font-size: 22px;
+  font-weight: 500;
+`;
+
+const WrapperBlocksInfo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+`;
+
+export default {
+  Wrapper,
+  WrapperBaseInfo,
+  WrapperInfo,
+  Image,
+  WrapperTypes,
+  Title,
+  WrapperBlocksInfo,
+};
