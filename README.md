@@ -6,7 +6,7 @@
 
 Pokedex
 
-[Live demo](https://weather-geolocation-demo.netlify.app/)
+[Live demo](https://pokedex-colomfernando.netlify.app)
 
 ## Packages installed
 
