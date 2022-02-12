@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Name = styled.p`
   font-weight: 700;
   flex-basis: 65%;
-  font-size: 18px;
+  font-size: 16px;
   margin-right: 12px;
   text-transform: uppercase;
   position: relative;
@@ -31,6 +31,7 @@ const Value = styled.p`
 const WrapperBar = styled.div`
   display: flex;
   width: 100%;
+  height: 18px;
   border-radius: 10px;
   background-color: ${palette.common.grey};
 `;
